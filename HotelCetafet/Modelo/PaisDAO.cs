@@ -50,7 +50,7 @@ namespace HotelCetafet.Modelo
 
         public void setApagar(Pais pais)
         {
-            conexao.Pais.Attach(pais);
+           // conexao.Pais.Attach(pais);
             conexao.Pais.Remove(pais);
             conexao.SaveChanges();
 
