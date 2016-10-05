@@ -1,0 +1,15 @@
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\HotelCetafet.exe.config
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\HotelCetafet.exe
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\HotelCetafet.pdb
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.csprojResolveAssemblyReference.cache
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.FrmPrincipal.resources
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.Properties.Resources.resources
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.csproj.GenerateResource.Cache
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.exe
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.pdb
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.View.FrmCliente.resources
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.dll
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.xml
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\regyn\documents\visual studio 2015\Projects\HotelCetafet\HotelCetafet\obj\Debug\HotelCetafet.View.FrmPais.resources
