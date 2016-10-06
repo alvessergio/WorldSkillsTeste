@@ -29,3 +29,6 @@ C:\workspace\WorldSkillsTeste\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetaf
 C:\workspace\WorldSkillsTeste\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.FrmPrincipal.resources
 C:\workspace\WorldSkillsTeste\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.Properties.Resources.resources
 C:\workspace\WorldSkillsTeste\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csproj.GenerateResource.Cache
+C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\HotelCetafet.exe.config
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.exe
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.pdb

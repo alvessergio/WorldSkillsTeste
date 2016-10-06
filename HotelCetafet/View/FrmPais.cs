@@ -48,7 +48,28 @@ namespace HotelCetafet.View
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
+            paisBindingSource.Filter = "nome like '"+txtPesquisa.Text+"%' or sigla like '"+txtPesquisa.Text+"%' or continente like '"+txtPesquisa.Text+"%'";
+        }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (Msg.simNao("Realmente Deseja Excluir?") == DialogResult.Yes)
+            {
+               
+                try
+                {
+                    this.paisBindingSource.RemoveCurrent();
+                    this.Validate();
+                    this.paisBindingSource.EndEdit();
+                    this.tableAdapterManager.UpdateAll(this.bdHotelCetafestDataSet);
+                    Msg.sucesso("Removido com sucesso.");
+                    this.paisTableAdapter.Fill(this.bdHotelCetafestDataSet.Pais);
+                }
+                catch (Exception ex)
+                {
+                    Msg.erro("Não foi possivel remover os dados.\nO sistema não está conseguindo se conectar com o servidor!");
+                }
+            }
         }
     }
 }

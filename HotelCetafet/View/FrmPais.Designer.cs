@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPais));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label siglaLabel;
             System.Windows.Forms.Label populacaoLabel;
             System.Windows.Forms.Label continenteLabel;
             System.Windows.Forms.Label label1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPais));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bdHotelCetafestDataSet = new HotelCetafet.bdHotelCetafestDataSet();
             this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.paisTableAdapter = new HotelCetafet.bdHotelCetafestDataSetTableAdapters.PaisTableAdapter();
             this.tableAdapterManager = new HotelCetafet.bdHotelCetafestDataSetTableAdapters.TableAdapterManager();
             this.paisBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.paisBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.paisDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.siglaTextBox = new System.Windows.Forms.TextBox();
             this.populacaoTextBox = new System.Windows.Forms.TextBox();
@@ -75,6 +75,51 @@
             this.paisBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.paisDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(12, 49);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 4;
+            nomeLabel.Text = "Nome:";
+            // 
+            // siglaLabel
+            // 
+            siglaLabel.AutoSize = true;
+            siglaLabel.Location = new System.Drawing.Point(12, 97);
+            siglaLabel.Name = "siglaLabel";
+            siglaLabel.Size = new System.Drawing.Size(31, 13);
+            siglaLabel.TabIndex = 6;
+            siglaLabel.Text = "sigla:";
+            // 
+            // populacaoLabel
+            // 
+            populacaoLabel.AutoSize = true;
+            populacaoLabel.Location = new System.Drawing.Point(125, 97);
+            populacaoLabel.Name = "populacaoLabel";
+            populacaoLabel.Size = new System.Drawing.Size(61, 13);
+            populacaoLabel.TabIndex = 8;
+            populacaoLabel.Text = "Populacao:";
+            // 
+            // continenteLabel
+            // 
+            continenteLabel.AutoSize = true;
+            continenteLabel.Location = new System.Drawing.Point(314, 97);
+            continenteLabel.Name = "continenteLabel";
+            continenteLabel.Size = new System.Drawing.Size(61, 13);
+            continenteLabel.TabIndex = 10;
+            continenteLabel.Text = "Continente:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(258, 161);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(53, 13);
+            label1.TabIndex = 13;
+            label1.Text = "Pesquisa:";
             // 
             // bdHotelCetafestDataSet
             // 
@@ -128,6 +173,21 @@
             this.paisBindingNavigator.TabIndex = 0;
             this.paisBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(56, 22);
+            this.bindingNavigatorAddNewItem.Text = "Novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -160,16 +220,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -192,16 +245,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(56, 22);
-            this.bindingNavigatorAddNewItem.Text = "Novo";
             // 
             // paisBindingNavigatorSaveItem
             // 
@@ -211,12 +256,21 @@
             this.paisBindingNavigatorSaveItem.Text = "Salvar";
             this.paisBindingNavigatorSaveItem.Click += new System.EventHandler(this.paisBindingNavigatorSaveItem_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(61, 22);
+            this.toolStripButton1.Text = "Excluir";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // paisDataGridView
             // 
             this.paisDataGridView.AllowUserToAddRows = false;
             this.paisDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.paisDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.paisDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.paisDataGridView.AutoGenerateColumns = false;
             this.paisDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.paisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -268,23 +322,6 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(61, 22);
-            this.toolStripButton1.Text = "Excluir";
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(12, 49);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(38, 13);
-            nomeLabel.TabIndex = 4;
-            nomeLabel.Text = "Nome:";
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "nome", true));
@@ -292,15 +329,6 @@
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(500, 20);
             this.nomeTextBox.TabIndex = 5;
-            // 
-            // siglaLabel
-            // 
-            siglaLabel.AutoSize = true;
-            siglaLabel.Location = new System.Drawing.Point(12, 97);
-            siglaLabel.Name = "siglaLabel";
-            siglaLabel.Size = new System.Drawing.Size(31, 13);
-            siglaLabel.TabIndex = 6;
-            siglaLabel.Text = "sigla:";
             // 
             // siglaTextBox
             // 
@@ -310,15 +338,6 @@
             this.siglaTextBox.Size = new System.Drawing.Size(100, 20);
             this.siglaTextBox.TabIndex = 7;
             // 
-            // populacaoLabel
-            // 
-            populacaoLabel.AutoSize = true;
-            populacaoLabel.Location = new System.Drawing.Point(125, 97);
-            populacaoLabel.Name = "populacaoLabel";
-            populacaoLabel.Size = new System.Drawing.Size(61, 13);
-            populacaoLabel.TabIndex = 8;
-            populacaoLabel.Text = "Populacao:";
-            // 
             // populacaoTextBox
             // 
             this.populacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "Populacao", true));
@@ -326,15 +345,6 @@
             this.populacaoTextBox.Name = "populacaoTextBox";
             this.populacaoTextBox.Size = new System.Drawing.Size(178, 20);
             this.populacaoTextBox.TabIndex = 9;
-            // 
-            // continenteLabel
-            // 
-            continenteLabel.AutoSize = true;
-            continenteLabel.Location = new System.Drawing.Point(314, 97);
-            continenteLabel.Name = "continenteLabel";
-            continenteLabel.Size = new System.Drawing.Size(61, 13);
-            continenteLabel.TabIndex = 10;
-            continenteLabel.Text = "Continente:";
             // 
             // continenteTextBox
             // 
@@ -351,15 +361,6 @@
             this.txtPesquisa.Size = new System.Drawing.Size(198, 20);
             this.txtPesquisa.TabIndex = 12;
             this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(258, 161);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(53, 13);
-            label1.TabIndex = 13;
-            label1.Text = "Pesquisa:";
             // 
             // FrmPais
             // 
