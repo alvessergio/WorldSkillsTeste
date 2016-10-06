@@ -15,7 +15,7 @@ namespace HotelCetafet.View
         public FrmCliente()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
+   
         }
 
         private void FrmCliente_Load(object sender, EventArgs e)
@@ -31,15 +31,52 @@ namespace HotelCetafet.View
 
         private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.clienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bdHotelCetafestDataSet);
+            try
+            {
+                this.Validate();
+                this.clienteBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.bdHotelCetafestDataSet);
+                Msg.sucesso("Dados salvos com sucesso.");
+                this.clienteTableAdapter.Fill(this.bdHotelCetafestDataSet.Cliente);
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("null"))
+                {
+                    Msg.atencao("Preencha todos os campos.");
+                }
+                else
+                {
+                    Msg.erro("Não foi possivel salvar os dados.\nO sistema não está conseguindo se conectar com o servidor!");
+                }
+            }
 
         }
 
         private void txtPesquisa_TextChanged(object sender, EventArgs e)
         {
             clienteBindingSource.Filter = "nome like '"+txtPesquisa.Text+"%'";
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if (Msg.simNao("Realmente Deseja Excluir?") == DialogResult.Yes)
+            {
+
+                try
+                {
+                    this.clienteBindingSource.RemoveCurrent();
+                    this.Validate();
+                    this.clienteBindingSource.EndEdit();
+                    this.tableAdapterManager.UpdateAll(this.bdHotelCetafestDataSet);
+                    Msg.sucesso("Removido com sucesso.");
+                    this.clienteTableAdapter.Fill(this.bdHotelCetafestDataSet.Cliente);
+                }
+                catch (Exception ex)
+                {
+                    Msg.erro("Não foi possivel remover os dados.\nO sistema não está conseguindo se conectar com o servidor!");
+                }
+            }
         }
     }
 }

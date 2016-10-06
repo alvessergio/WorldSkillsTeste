@@ -37,5 +37,11 @@ namespace HotelCetafet
             formPais.ShowDialog();
 
         }
+
+        private void profissãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProfissao tela = new FormProfissao();
+            tela.ShowDialog();
+        }
     }
 }
