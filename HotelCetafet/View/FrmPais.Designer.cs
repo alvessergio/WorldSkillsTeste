@@ -30,14 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPais));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnCarregar = new System.Windows.Forms.Button();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.Label nomeLabel;
+            System.Windows.Forms.Label siglaLabel;
+            System.Windows.Forms.Label populacaoLabel;
+            System.Windows.Forms.Label continenteLabel;
+            System.Windows.Forms.Label label1;
+            this.bdHotelCetafestDataSet = new HotelCetafet.bdHotelCetafestDataSet();
+            this.paisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.paisTableAdapter = new HotelCetafet.bdHotelCetafestDataSetTableAdapters.PaisTableAdapter();
+            this.tableAdapterManager = new HotelCetafet.bdHotelCetafestDataSetTableAdapters.TableAdapterManager();
+            this.paisBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -48,76 +51,60 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            this.paisBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.paisDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.siglaTextBox = new System.Windows.Forms.TextBox();
+            this.populacaoTextBox = new System.Windows.Forms.TextBox();
+            this.continenteTextBox = new System.Windows.Forms.TextBox();
+            this.txtPesquisa = new System.Windows.Forms.TextBox();
+            nomeLabel = new System.Windows.Forms.Label();
+            siglaLabel = new System.Windows.Forms.Label();
+            populacaoLabel = new System.Windows.Forms.Label();
+            continenteLabel = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.bdHotelCetafestDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingNavigator)).BeginInit();
+            this.paisBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paisDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // bdHotelCetafestDataSet
             // 
-            this.button1.Location = new System.Drawing.Point(52, 360);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bdHotelCetafestDataSet.DataSetName = "bdHotelCetafestDataSet";
+            this.bdHotelCetafestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox1
+            // paisBindingSource
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 1;
+            this.paisBindingSource.DataMember = "Pais";
+            this.paisBindingSource.DataSource = this.bdHotelCetafestDataSet;
             // 
-            // textBox2
+            // paisTableAdapter
             // 
-            this.textBox2.Location = new System.Drawing.Point(280, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(51, 20);
-            this.textBox2.TabIndex = 2;
+            this.paisTableAdapter.ClearBeforeFill = true;
             // 
-            // textBox3
+            // tableAdapterManager
             // 
-            this.textBox3.Location = new System.Drawing.Point(347, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.PaisTableAdapter = this.paisTableAdapter;
+            this.tableAdapterManager.ProfissaoTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = HotelCetafet.bdHotelCetafestDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // dataGridView1
+            // paisBindingNavigator
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 180);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(411, 150);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // btnCarregar
-            // 
-            this.btnCarregar.Location = new System.Drawing.Point(412, 347);
-            this.btnCarregar.Name = "btnCarregar";
-            this.btnCarregar.Size = new System.Drawing.Size(75, 23);
-            this.btnCarregar.TabIndex = 5;
-            this.btnCarregar.Text = "Carregar";
-            this.btnCarregar.UseVisualStyleBackColor = true;
-            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
-            // 
-            // bindingNavigator1
-            // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.BindingSource = this.bindingSource1;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.paisBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.paisBindingNavigator.BindingSource = this.paisBindingSource;
+            this.paisBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.paisBindingNavigator.DeleteItem = null;
+            this.paisBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -128,17 +115,18 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(527, 25);
-            this.bindingNavigator1.TabIndex = 6;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.paisBindingNavigatorSaveItem,
+            this.toolStripButton1});
+            this.paisBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.paisBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.paisBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.paisBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.paisBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.paisBindingNavigator.Name = "paisBindingNavigator";
+            this.paisBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.paisBindingNavigator.Size = new System.Drawing.Size(535, 25);
+            this.paisBindingNavigator.TabIndex = 0;
+            this.paisBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -209,115 +197,197 @@
             // 
             // bindingNavigatorAddNewItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(56, 22);
+            this.bindingNavigatorAddNewItem.Text = "Novo";
             // 
-            // bindingNavigatorDeleteItem
+            // paisBindingNavigatorSaveItem
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            this.paisBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("paisBindingNavigatorSaveItem.Image")));
+            this.paisBindingNavigatorSaveItem.Name = "paisBindingNavigatorSaveItem";
+            this.paisBindingNavigatorSaveItem.Size = new System.Drawing.Size(58, 22);
+            this.paisBindingNavigatorSaveItem.Text = "Salvar";
+            this.paisBindingNavigatorSaveItem.Click += new System.EventHandler(this.paisBindingNavigatorSaveItem_Click);
+            // 
+            // paisDataGridView
+            // 
+            this.paisDataGridView.AllowUserToAddRows = false;
+            this.paisDataGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            this.paisDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.paisDataGridView.AutoGenerateColumns = false;
+            this.paisDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.paisDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.paisDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.paisDataGridView.DataSource = this.paisBindingSource;
+            this.paisDataGridView.Location = new System.Drawing.Point(12, 184);
+            this.paisDataGridView.Name = "paisDataGridView";
+            this.paisDataGridView.ReadOnly = true;
+            this.paisDataGridView.Size = new System.Drawing.Size(503, 236);
+            this.paisDataGridView.TabIndex = 1;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "codigo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nome";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "sigla";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Sigla";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Populacao";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Populacao";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Continente";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Continente";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(61, 22);
+            this.toolStripButton1.Text = "Excluir";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(12, 49);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 4;
+            nomeLabel.Text = "Nome:";
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(15, 65);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(500, 20);
+            this.nomeTextBox.TabIndex = 5;
+            // 
+            // siglaLabel
+            // 
+            siglaLabel.AutoSize = true;
+            siglaLabel.Location = new System.Drawing.Point(12, 97);
+            siglaLabel.Name = "siglaLabel";
+            siglaLabel.Size = new System.Drawing.Size(31, 13);
+            siglaLabel.TabIndex = 6;
+            siglaLabel.Text = "sigla:";
+            // 
+            // siglaTextBox
+            // 
+            this.siglaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "sigla", true));
+            this.siglaTextBox.Location = new System.Drawing.Point(15, 113);
+            this.siglaTextBox.Name = "siglaTextBox";
+            this.siglaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.siglaTextBox.TabIndex = 7;
+            // 
+            // populacaoLabel
+            // 
+            populacaoLabel.AutoSize = true;
+            populacaoLabel.Location = new System.Drawing.Point(125, 97);
+            populacaoLabel.Name = "populacaoLabel";
+            populacaoLabel.Size = new System.Drawing.Size(61, 13);
+            populacaoLabel.TabIndex = 8;
+            populacaoLabel.Text = "Populacao:";
+            // 
+            // populacaoTextBox
+            // 
+            this.populacaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "Populacao", true));
+            this.populacaoTextBox.Location = new System.Drawing.Point(128, 113);
+            this.populacaoTextBox.Name = "populacaoTextBox";
+            this.populacaoTextBox.Size = new System.Drawing.Size(178, 20);
+            this.populacaoTextBox.TabIndex = 9;
+            // 
+            // continenteLabel
+            // 
+            continenteLabel.AutoSize = true;
+            continenteLabel.Location = new System.Drawing.Point(314, 97);
+            continenteLabel.Name = "continenteLabel";
+            continenteLabel.Size = new System.Drawing.Size(61, 13);
+            continenteLabel.TabIndex = 10;
+            continenteLabel.Text = "Continente:";
+            // 
+            // continenteTextBox
+            // 
+            this.continenteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.paisBindingSource, "Continente", true));
+            this.continenteTextBox.Location = new System.Drawing.Point(317, 113);
+            this.continenteTextBox.Name = "continenteTextBox";
+            this.continenteTextBox.Size = new System.Drawing.Size(198, 20);
+            this.continenteTextBox.TabIndex = 11;
+            // 
+            // txtPesquisa
+            // 
+            this.txtPesquisa.Location = new System.Drawing.Point(317, 158);
+            this.txtPesquisa.Name = "txtPesquisa";
+            this.txtPesquisa.Size = new System.Drawing.Size(198, 20);
+            this.txtPesquisa.TabIndex = 12;
+            this.txtPesquisa.TextChanged += new System.EventHandler(this.txtPesquisa_TextChanged);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Nome";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(277, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Sigla";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(344, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Populacao";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(36, 154);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(142, 20);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Pesquisar";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(167, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 46);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Alterar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(283, 360);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 46);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Excluir";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(258, 161);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(53, 13);
+            label1.TabIndex = 13;
+            label1.Text = "Pesquisa:";
             // 
             // FrmPais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(527, 432);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.bindingNavigator1);
-            this.Controls.Add(this.btnCarregar);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(535, 440);
+            this.Controls.Add(label1);
+            this.Controls.Add(this.txtPesquisa);
+            this.Controls.Add(nomeLabel);
+            this.Controls.Add(this.nomeTextBox);
+            this.Controls.Add(siglaLabel);
+            this.Controls.Add(this.siglaTextBox);
+            this.Controls.Add(populacaoLabel);
+            this.Controls.Add(this.populacaoTextBox);
+            this.Controls.Add(continenteLabel);
+            this.Controls.Add(this.continenteTextBox);
+            this.Controls.Add(this.paisDataGridView);
+            this.Controls.Add(this.paisBindingNavigator);
             this.Name = "FrmPais";
-            this.Text = "Pais";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gerenciamento de Pais";
             this.Load += new System.EventHandler(this.FrmPais_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdHotelCetafestDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paisBindingNavigator)).EndInit();
+            this.paisBindingNavigator.ResumeLayout(false);
+            this.paisBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.paisDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,17 +395,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.Button btnCarregar;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private bdHotelCetafestDataSet bdHotelCetafestDataSet;
+        private System.Windows.Forms.BindingSource paisBindingSource;
+        private bdHotelCetafestDataSetTableAdapters.PaisTableAdapter paisTableAdapter;
+        private bdHotelCetafestDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator paisBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -344,12 +410,18 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ToolStripButton paisBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView paisDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.TextBox nomeTextBox;
+        private System.Windows.Forms.TextBox siglaTextBox;
+        private System.Windows.Forms.TextBox populacaoTextBox;
+        private System.Windows.Forms.TextBox continenteTextBox;
+        private System.Windows.Forms.TextBox txtPesquisa;
     }
 }

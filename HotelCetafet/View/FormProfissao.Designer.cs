@@ -1,6 +1,6 @@
 ﻿namespace HotelCetafet.View
 {
-    partial class FrmCliente
+    partial class FormProfissao
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FrmCliente
+            // FormProfissao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 338);
-            this.Name = "FrmCliente";
+            this.Name = "FormProfissao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gerenciamento de Cliente";
-            this.Load += new System.EventHandler(this.FrmCliente_Load);
+            this.Text = "Gerenciamento de Profissões";
             this.ResumeLayout(false);
 
         }
