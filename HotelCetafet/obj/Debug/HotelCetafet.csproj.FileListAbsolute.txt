@@ -32,3 +32,16 @@ C:\workspace\WorldSkillsTeste\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetaf
 C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\HotelCetafet.exe.config
 C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.exe
 C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.pdb
+C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\HotelCetafet.exe
+C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\HotelCetafet.pdb
+C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.dll
+C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.SqlServer.dll
+C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.xml
+C:\workspace\WorldSkillsTeste\HotelCetafet\bin\Debug\EntityFramework.SqlServer.xml
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csprojResolveAssemblyReference.cache
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.View.FormProfissao.resources
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.View.FrmCliente.resources
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.View.FrmPais.resources
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.FrmPrincipal.resources
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.Properties.Resources.resources
+C:\workspace\WorldSkillsTeste\HotelCetafet\obj\Debug\HotelCetafet.csproj.GenerateResource.Cache
